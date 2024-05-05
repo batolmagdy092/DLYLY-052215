@@ -1,0 +1,110 @@
+function runAnimations() {
+  runAnimations_11071();
+  runAnimations_11072();
+
+  document.querySelector("#id-1877").addEventListener("click", func_1877_11064);
+
+  function func_1877_11064(e) {
+    e.stopPropagation();
+
+    document
+      .querySelector(".parent-div")
+      .classList.add("parent-animation-1836");
+    document.querySelector("#id-1836").classList.add("animationClass-1836");
+    document.querySelector("#id-1837").classList.add("animationClass-1837");
+    document.querySelector("#id-1839").classList.add("animationClass-1839");
+    document.querySelector("#id-1838").classList.add("animationClass-1838");
+    document.querySelector("#id-1841").classList.add("animationClass-1841");
+    document.querySelector("#id-1840").classList.add("animationClass-1840");
+    document.querySelector("#id-1843").classList.add("animationClass-1843");
+    document.querySelector("#id-1877").classList.add("animationClass-1877");
+    document
+      .querySelector("#id-1877 > div:first-child")
+      .classList.add("bgClass-11073");
+    document
+      .querySelector("#id-11071")
+      .classList.add("animationClass-null11071");
+    document
+      .querySelector("#id-11069")
+      .classList.add("animationClass-null11069");
+    document
+      .querySelector("#id-11070")
+      .classList.add("animationClass-null11070");
+    document.querySelector("#id-1844").classList.add("animationClass-1844");
+    document
+      .querySelector("#id-11075")
+      .classList.add("animationClass-null11075");
+    document
+      .querySelector("#id-11076")
+      .classList.add("animationClass-null11076");
+    document
+      .querySelector("#id-11078")
+      .classList.add("animationClass-null11078");
+    document
+      .querySelector("#id-11084")
+      .classList.add("animationClass-null11084");
+    document
+      .querySelector("#id-11085")
+      .classList.add("animationClass-null11085");
+    document
+      .querySelector("#id-11087")
+      .classList.add("animationClass-null11087");
+    document
+      .querySelector("#id-11086")
+      .classList.add("animationClass-null11086");
+    document
+      .querySelector("#id-11079")
+      .classList.add("animationClass-null11079");
+    document
+      .querySelector("#id-11077")
+      .classList.add("animationClass-null11077");
+    document
+      .querySelector("#id-11080")
+      .classList.add("animationClass-null11080");
+    document
+      .querySelector("#id-11081")
+      .classList.add("animationClass-null11081");
+    document
+      .querySelector("#id-11082")
+      .classList.add("animationClass-null11082");
+    document
+      .querySelector("#id-11083")
+      .classList.add("animationClass-null11083");
+    document.querySelector("#id-1850").classList.add("animationClass-1850");
+    document.querySelector("#id-1842").classList.add("animationClass-1842");
+    document
+      .querySelector("#id-11074")
+      .classList.add("animationClass-null11074");
+    document
+      .querySelector("#id-11088")
+      .classList.add("animationClass-null11088");
+    document
+      .querySelector("#id-11089")
+      .classList.add("animationClass-null11089");
+    document
+      .querySelector("#id-11091")
+      .classList.add("animationClass-null11091");
+    document
+      .querySelector("#id-11090")
+      .classList.add("animationClass-null11090");
+    document
+      .querySelector("#id-11092")
+      .classList.add("animationClass-null11092");
+    document
+      .querySelector("#id-11094")
+      .classList.add("animationClass-null11094");
+    document
+      .querySelector("#id-11093")
+      .classList.add("animationClass-null11093");
+    document
+      .querySelector("#id-11072")
+      .classList.add("animationClass-null11072");
+    document.querySelector("#id-1878").classList.add("animationClass-1878");
+    document
+      .querySelector("#id-1877")
+      .removeEventListener("click", func_1877_11064);
+  }
+}
+runAnimations();
+function runAnimations_11071() {}
+function runAnimations_11072() {}
