@@ -1,0 +1,269 @@
+body
+{
+ margin: 0;
+ height: 100vh;
+ overflow: hidden;
+ background-image: url('backgrounds/m.jpg');
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+}    
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 55, 76, 0.416);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+    z-index: 1;
+}
+.co {
+    position: relative;
+    z-index: 2; 
+} 
+.large
+{
+ width: 1100px;
+ height: 550px;
+ border: solid 1.5px white;
+ border-radius: 25px;
+ margin-left: 15.20%;
+ margin-top: 6%;
+ background-color: rgba(95, 162, 185, 0.847);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+} 
+.login
+{
+ width: 500px;
+ height: 700px;
+ border: solid 1.5px rgb(202, 220, 231);
+ border-radius: 25px;
+ margin-top: -48.5%;
+ margin-left: 6%;
+ background-color: rgb(202, 220, 231);
+ backdrop-filter: blur(10px);
+ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+ text-align: center;
+}
+.Create
+{
+ color: rgb(5, 55, 76);
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 45px;
+}
+.x
+{
+    font-size: medium;
+    color: rgb(95, 162, 185);
+}
+.log
+{
+ color: white;
+ font-family: Arial, Helvetica, sans-serif;
+ margin-left: 58.5%;
+}
+ .fn-input 
+ {
+ width: 300px;
+ padding: 10px 30px 10px 10px; /* Added padding for the arrow */
+ margin-bottom: 20px;
+ border: solid 2px rgb(95, 162, 185);
+ border-radius: 5px;
+ background-color: transparent;
+ color: rgb(5, 55, 76);
+ font-size: 20px;
+ }
+ .input-container 
+ {
+ position: relative;
+ }
+ .fn-input 
+ {
+     font-size: 16px;
+     padding: 12px 16px;
+     outline: none;
+     transition: all 0.3s ease;
+ }
+ .fn-input::placeholder
+ {
+     background-color: transparent;
+ }
+ .fn-input:focus 
+ {
+     border-color: rgb(7, 71, 99);
+     box-shadow: 0 0 8px rgba(5, 55, 76, 0.42); 
+     border-radius: 8px;
+ }
+ .floating-label 
+ {
+     position: absolute;
+     top: 15px;
+     left: 90px;
+     background-color: rgb(202, 220, 231);
+     backdrop-filter: blur(10px);
+     padding: 0 5px;
+     color: #999;
+     font-size: 16px;
+     pointer-events: none;
+     transition: all 0.2s ease;
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ .input-container input:focus + .floating-label,
+ .input-container input:not(:placeholder-shown) + .floating-label 
+ {
+     font-family:Arial, Helvetica, sans-serif;
+     top: -10px; 
+     left: 95px;
+     font-size: 12px; 
+     color: rgb(7, 71, 99); 
+ }
+ .input-container input:focus {
+     border-color: rgb(7, 71, 99) ;
+ }
+ .fn-input::placeholder {
+     color: transparent; /* hide placeholder */
+ }
+ .final
+ {
+    text-align: center;
+ }
+ .not
+ {
+ color: rgb(5, 55, 76);
+ font-size: 15px;
+ margin-top: 2%;
+ }
+ .privecylink
+ {
+ text-decoration: none;
+ color: rgb(95, 162, 185);
+ }
+ .privecylink:hover
+ {
+ color: rgb(5, 55, 76);
+ }
+ .final p
+ {
+     text-align: center;
+ }
+ .final button
+ {
+     width: 250px;
+     height: 50px;
+     border: solid 1px white;
+     border-radius: 15px;
+     background-color: rgb(95, 162, 185);
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 20px;
+ }
+ .final button:hover
+ {
+     border: solid 1px white;
+     border-radius: 15px;
+     background-color: rgb(5, 55, 76);
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     color: white;
+ }
+ .logg button
+ {
+     margin-left: 69.5%;
+     width: 150px;
+     height: 50px;
+     border: solid 1px white;
+     border-radius: 15px;
+     background-color: rgb(95, 162, 185);
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 20px;
+ }
+ .logg button:hover
+ {
+     border: solid 1px white;
+     border-radius: 15px;
+     background-color: rgb(5, 55, 76);
+     backdrop-filter: blur(10px);
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     color: white;
+ }
+ .im
+ {
+     width: 300px;
+     height: 300px;
+     margin-left: 62%;
+     margin-top: 1%;
+ }
+ .forgot
+{
+    color: rgb(5, 55, 76);
+    text-decoration: none;
+    font-size: large;
+    padding-left: 50%;
+}
+.forgot:hover
+{
+    color: rgb(95, 162, 185);
+}
+.hre
+{
+    width: 18%;
+    color: rgb(5, 55, 76);    
+}
+.hree
+{
+    width: 18%;
+    color: rgb(5, 55, 76);
+}
+.navbut
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2%;
+}
+.or
+{
+    color: rgb(5, 55, 76);
+    font-size: large;
+}
+.social-login {
+    display: flex;
+    justify-content: space-evenly;
+}
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Diameter of the circle */
+    height: 50px; /* Diameter of the circle */
+    margin: 0 10px;
+    border-radius: 50%; /* Make the button circular */
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    transition: transform 0.2s;
+}
+.facebook-button {
+    background-color: #3b5998; /* Facebook blue */
+    margin-left: 10%;
+}
+.google-button {
+    background-color: #db4437; /* Google red */
+}
+.twitter-button {
+    background-color: #1da1f2; /* Twitter blue */
+    margin-right: 10%;
+}
+.social-button:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}

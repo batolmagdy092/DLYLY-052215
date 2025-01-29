@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>DLYLY Tourism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            transition: all 0.3s ease;
+        }
+        html, body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 4%;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #3498db;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+        }
+        .home, .about, .services, .contact {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .active-section {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        .home { background: #3498db; color: white; }
+        .about { background: #ecf0f1; }
+        .services { background: #bdc3c7; }
+        .contact { background: #34495e; color: white; }
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">DLYLY</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home active-section" id="home">
+        <h1>Welcome to DLYLY Tourism</h1>
+        <p>Discover Amazing Places with us!</p>
+    </section>
+
+    <section class="about" id="about">
+        <h1>About Us</h1>
+        <p>We offer exceptional tourism services to make your adventure unforgettable.</p>
+    </section>
+
+    <section class="services" id="services">
+        <h1>Our Services</h1>
+        <p>From guided tours to hotel bookings, we've got you covered.</p>
+    </section>
+
+
+    <script>
+        // Selecting all sections
+        const sections = document.querySelectorAll('section');
+
+        // Creating the observer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                // Adding class when the section is in view
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active-section');
+                    // Remove active-section class from other sections
+                    sections.forEach(section => {
+                        if (section !== entry.target) {
+                            section.classList.remove('active-section');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.2 }); // Threshold can be adjusted for better timing
+
+        // Observing each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

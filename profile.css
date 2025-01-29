@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+body
+{
+  overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color: rgba(0, 0, 0, 0.174);*/
+    background-color: rgba(5, 55, 76, 0.313);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3%; 
+    height: 75px; 
+  }
+  header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#fff;
+    text-transform: uppercase;
+  } 
+  header .logo span{
+    color:rgb(95, 162, 185);
+  }
+  .logo:hover
+  {
+    color:rgb(95, 162, 185);
+  }
+  .logo:hover span
+  {
+    color:#fff;
+  }
+  .navbar ul
+  {
+    list-style: none;
+  }
+  header .navbar a {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 1rem; 
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+  } 
+  header .navbar a:hover {
+    color: rgb(95, 162, 185);
+  }
+header .navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(95, 162, 185);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+header .navbar a:hover::before {
+    width: 100%;
+}
+  header .icons i {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem; 
+  }
+  header .icons i:hover {
+    color: rgb(95, 162, 185);
+  }
+  header img {
+    margin-top: 6%;
+    width: 170px; 
+    height: 110px;
+  }
+  .ui-w-80 {
+    width: 80px !important;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background: rgba(0, 0, 0, 0);
+    color: #4E5155;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background: transparent;
+    color: #26B4FF;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc !important;
+}
+
+.btn-facebook {
+    border-color: rgba(0, 0, 0, 0);
+    background: #3B5998;
+    color: #fff;
+}
+
+.btn-instagram {
+    border-color: rgba(0, 0, 0, 0);
+    background: #000;
+    color: #fff;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.account-settings-links .list-group-item.active {
+    font-weight: bold !important;
+}
+
+html:not(.dark-style) .account-settings-links .list-group-item.active {
+    background: transparent !important;
+}
+
+.account-settings-multiselect~.select2-container {
+    width: 100% !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.material-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}
+
+.material-style .account-settings-links .list-group-item.active {
+    color: #4e5155 !important;
+}
+
+.dark-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark-style .account-settings-links .list-group-item.active {
+    color: #fff !important;
+}
+
+.light-style .account-settings-links .list-group-item.active {
+    color: #4E5155 !important;
+}
+
+.light-style .account-settings-links .list-group-item {
+    padding: 0.85rem 1.5rem;
+    border-color: rgba(24, 28, 33, 0.03) !important;
+}

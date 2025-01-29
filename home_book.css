@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+body
+{
+  overflow-x: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+header {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*background-color: rgba(0, 0, 0, 0.174);*/
+    background-color: rgba(5, 55, 76, 0.313);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 3%; 
+    height: 75px; 
+  }
+  header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#fff;
+    text-transform: uppercase;
+  } 
+  header .logo span{
+    color:rgb(95, 162, 185);
+  }
+  .logo:hover
+  {
+    color:rgb(95, 162, 185);
+  }
+  .logo:hover span
+  {
+    color:#fff;
+  }
+  .navbar ul
+  {
+    list-style: none;
+  }
+  header .navbar a {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 1rem; 
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+  } 
+  header .navbar a:hover {
+    color: rgb(95, 162, 185);
+  }
+  header .navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(95, 162, 185);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+header .navbar a:hover::before {
+    width: 100%;
+}
+  header .icons i {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 1rem; 
+  }
+  header .icons i:hover {
+    color: rgb(95, 162, 185);
+  }
+  header img {
+    margin-top: 6%;
+    width: 170px; 
+    height: 110px;
+  }
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+}
+.content h3 {
+    font-size: 50px;
+    color:#fff;
+    text-transform: uppercase;
+}
+.content p {
+    font-size: 30px;
+    color:#fff;
+    padding:.5rem 0;
+}
+.home .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.home .controls {
+  padding: 1rem;
+  border-radius: 5rem;
+  background-color: rgba(5, 55, 76, 0.313);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+  position: relative;
+  top: 10rem;
+}
+.home .controls .vid-btn {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 .5rem;
+}
+.home .controls .vid-btn.active {
+  background: rgb(95, 162, 185);
+}
+.heading{
+    text-align: center;
+    padding:2.5rem 0;
+  }
+  .heading span{
+    font-size: 3.5rem;
+    background:rgb(95, 162, 185);
+    color:white;
+    border-radius: .5rem;
+    padding:.2rem 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  .heading span.space{
+    background:none;
+  }
+  section{
+    padding:2rem 9%;
+  }
+  .companies {
+    position: relative;
+    background: url('backgrounds/m.jpg') no-repeat center center; 
+    background-size: cover;
+    height: 100vh;
+    border-top: 5px solid rgb(95, 162, 185);
+  }
+.companies::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 55, 76, 0.678);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+    z-index: 1;
+}
+.co {
+    position: relative;
+    z-index: 2; 
+}
+.com
+  {
+    display: flex;
+    justify-content: space-between;
+  }
+.carousel {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    margin-right: 10%;
+  }
+  .card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translateX(-50%);
+    width: 110%;
+    height: 500px;
+    padding: 20px;
+    background: #ffffffc3;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+  .carousel .photo_1
+  {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .carousel .photo_2
+  {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .carousel .photo_3
+  {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .carousel .photo_4
+  {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .carousel .photo_5
+  {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: -20%;
+  }
+  .carousel .photo_6
+  {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .carousel .photo_7
+  {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  #ejaza h3
+  {
+    margin-top: -7%;
+  }
+  #ejaza button
+  {
+    margin-top: 5%;
+  }
+  #maxim button
+  {
+    margin-top: 5%;
+  }
+  #travel button
+  {
+    margin-top: 5%;
+  }
+  #sky h3
+  {
+    margin-top: -20%;
+  }
+  #sky button
+  {
+    margin-top: 5%;
+  }
+  #tri button
+  {
+    margin-top: 5%;
+  }
+  #masr h3
+  {
+    margin-top: -10%;
+  }
+  #masr button
+  {
+    margin-top: 5%;
+  }
+  .card h3 {
+    color: rgb(5, 55, 76);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 0.9em;
+    color:#666;
+    margin-bottom: 15px;
+    margin-top: 4%;
+  }
+  .companies .card button {
+    padding: 10px 15px;
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 15px;
+    background-color: rgb(95, 162, 185);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    margin-top: -1%;
+  }
+  .companies .card button:hover{
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 15px;
+    background-color: rgb(5, 55, 76);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+  .card.active {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateZ(0px);
+    z-index: 2;
+  }
+  .card.next {
+    opacity: 0.6;
+    transform: translateX(20%) scale(0.9) translateZ(-100px);
+    z-index: 1;
+  }
+  .card.previous {
+    opacity: 0.6;
+    transform: translateX(-120%) scale(0.9) translateZ(-100px);
+    z-index: 1;
+  }
+  .companies .controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(50%);
+    z-index: 3;
+  }
+  .controls .prev
+  {
+    margin-left: -12%;
+  }
+  .controls .next
+  {
+    margin-right: -12%;
+  }
+  .companies .controls button {
+    background-color: rgb(95, 162, 185);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .companies .controls button:hover {
+    background-color: rgb(5, 55, 76);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+.companies .mk {
+    text-align: left;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: -8%;
+    margin-top: -2%;
+}
+.companies .line {
+    width: 8px; 
+    height: 175px; 
+    margin-top: -22%;
+    background-color: white; 
+    margin-right: 15px; 
+}
+.companies .text-m {
+    text-align: left;
+}
+.companies .mk h1 {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-left: 10px;
+    margin-top: 12%;
+    
+}
+.companies .mk h1 span {
+    color: rgb(95, 162, 185); 
+}
+.companies .text-m button {
+    padding: 10px 15px;
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 30px;
+    background-color: rgb(95, 162, 185);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .companies .text-m button:hover{
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 30px;
+    background-color: rgb(5, 55, 76);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+.mk p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-top: 10px;
+    color:#ffffff;
+    margin-left: 2%;
+    max-width: 600px;
+}
+.bk .icon {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 2px solid white; 
+    transition: transform 0.3s;
+}
+.bk:hover .icon {
+    transform: translateX(5px); 
+}
+.icon::before {
+    margin-left: 20%;
+    content: '>'; 
+    font-size: 18px;
+    color: white;
+    position: relative;
+    left: -1px; 
+}
+.tourguides
+{
+  height: 100vh;
+  border-top: 5px solid rgb(95, 162, 185);
+}
+.tourguides .review-slider{
+    padding-bottom: 2rem;
+  }
+  .tourguides .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    height: 450px;
+  }
+  .tourguides .box img{
+    height:9rem;
+    width:9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .tourguides .box h3{
+    color:#333;
+    font-size: 30px;
+  }
+  .tourguides .box p{
+    color:#666;
+    font-size: 14px;
+    padding:1rem 0;
+  }
+  .tourguides .box .stars i{
+    font-size: 1.5rem;
+  }
+  .stars i.fas {
+    color: rgba(255, 217, 0, 0.785);
+}
+.stars i.far {
+    color: lightgray;
+}
+  .see{
+    padding: 10px 15px;
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 30px;
+    background-color: rgb(95, 162, 185);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 42%;
+  }
+  .see:hover{
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 30px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: rgb(95, 162, 185);
+}
+.touristplaces {
+  position: relative;
+  background: url('backgrounds/Hurghada\,\ Egypt_.jpg') no-repeat center center; 
+  background-size: cover;
+  height: 100vh;
+  border-top: 5px solid rgb(95, 162, 185);
+}
+.touristplaces::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(5, 55, 76, 0.416);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+  z-index: 1;
+}
+.lon {
+  position: relative;
+  z-index: 2; 
+}
+.exp{
+  background-color: rgba(255, 255, 255, 0.201); 
+  padding: 20px;
+  max-width: 650px;
+  width: 650px;
+  border-radius: 0 20px 20px 0; 
+  margin-bottom: 20px;
+  margin-left: -22.5%;
+  max-height: 365px;
+}
+.exp h1 {
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+.exp p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color:white;
+  margin-left: 2%;
+  max-width: 600px;
+}
+.touristplaces .bkk{
+  padding: 10px 15px;
+  border: solid 1px rgb(95, 162, 185);
+  border-radius: 30px;
+  background-color: rgb(95, 162, 185);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.touristplaces .bkk:hover{
+  background-color: transparent;
+  color: rgb(95, 162, 185);
+  border: solid 1px rgb(95, 162, 185);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.bkk .icon {
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s, border-color 0.3s, color 0.3s;
+}
+.bkk:hover .icon {
+  transform: translateX(5px); 
+  color: rgb(95, 162, 185);
+  border-color: rgb(95, 162, 185); 
+}
+.bkk .icon::before {
+  content: '>'; 
+  font-size: 18px;
+  color: white;
+  position: relative;
+  left: -1px;
+  transition: color 0.3s; 
+}
+.bkk:hover .icon::before {
+  color: rgb(95, 162, 185); 
+}
+.pj
+{
+  display: flex;
+}
+.carouselin {
+  position: relative;
+  width: 80%;
+  max-width: 850px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 3px solid white;
+  margin-left: -3%;
+}
+.carousel-slide {
+  display: none;
+}
+.carousel-slide img {
+  width: 850px;
+  height: 300px;
+  border-radius: 20px;
+}
+.carousel-slide.active {
+  display: block;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10; 
+}
+.carousel-btn.prev {
+  left: 577px;
+  margin-top: -3%;
+}
+.carousel-btn.next {
+  right: -110px; 
+  margin-top: -3%;
+}
+.touristplaces .box-container {
+  display: flex;
+  gap: 1.5rem;
+}
+.touristplaces .box-container .box {
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+  border: 3px solid #fff;
+  border-radius: .5rem;
+  flex: 1 1 30rem;
+  position: relative;
+  max-width: 200px;
+  max-height: 200px;
+  left: -6px;
+}
+.touristplaces .box-container .box img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.touristplaces .box-container .box .content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.201); 
+  padding: 2rem;
+  padding-top: 5rem;
+}
+.touristplaces .box-container .box:hover .content {
+  top: 0;
+}
+.touristplaces .box-container .box .content h3 {
+  font-size: 20px;
+  color: white;
+}
+.touristplaces .content .btn{
+    border: solid 1px rgb(95, 162, 185);
+    border-radius: 30px;
+    background-color: rgb(95, 162, 185);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 80px;
+    height: 28px;
+    font-size: medium;
+}
+.touristplaces .content .btn:hover{
+  border: solid 1px rgb(95, 162, 185);
+  border-radius: 30px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: rgb(95, 162, 185);
+}
+footer{
+  border-top: 5px solid rgb(95, 162, 185);
+}
+footer .box-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8.2rem;
+}
+footer .box-container .box{
+  display: flex;
+  flex-direction: column;
+  align-items:   center;
+  padding:1rem 0;
+  flex:1 1 25rem;
+}
+footer .box-container .box h3{
+  padding:.7rem 0;
+  color:rgb(4, 39, 54);
+}
+footer .box-container .box a{
+  display: block;
+  padding:.7rem 0;
+  color:rgb(5, 55, 76);
+}
+footer .box-container .box a:hover{
+  color: rgb(95, 162, 185);
+  text-decoration: underline;
+}
+footer img
+{
+  width: 450px;
+  height: 400px;
+  margin-top: 3%;
+  margin-left: 9%;
+}
+.hotels
+{
+  background-color: #f4f4f9;
+  height: 100vh;
+  border-top: 5px solid rgb(95, 162, 185);
+}
+.hotels-container {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotels-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+}
+.hotels-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.hotels-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hotels-discount {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgb(95, 162, 185);
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.hotels-card-content {
+  padding: 20px;
+}
+.hotels-card-content h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: rgb(5, 55, 76);
+}
+.hotels-card-content p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 10px 0;
+}
+.hotels-card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+.hotels-duration {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.hotels-icon {
+  font-size: 18px;
+  color: #bbb;
+  margin-right: 5px;
+}
+.hotels-price {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+.hotels-old-price {
+  text-decoration: line-through;
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 5px; 
+}
+.hotels-new-price {
+  font-size: 18px;
+  color: rgb(95, 162, 185);
+  font-weight: bold;
+}
+.hotels-reviews {
+  display: flex;
+  gap: 0;
+  font-size: 20px;
+}
+.hotels-reviews i.fas {
+  color: rgba(255, 217, 0, 0.785);
+}
+.hotels-reviews i.far {
+  color: lightgray;
+}
+.hotels .text-m button {
+  padding: 10px 15px;
+  border: solid 1px rgb(95, 162, 185);
+  border-radius: 30px;
+  background-color: rgb(95, 162, 185);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.hotels .text-m button:hover{
+  border: solid 1px rgb(95, 162, 185);
+  border-radius: 30px;
+  background-color: rgb(5, 55, 76);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.hotels .mk {
+  text-align: left;
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: -8%;
+  margin-top: -2%;
+}
+.hotels .line {
+  width: 8px; 
+  height: 175px; 
+  margin-top: -22%;
+  background-color: rgb(5, 55, 76); 
+  margin-right: 15px; 
+}
+.hotels .text-m {
+  text-align: left;
+}
+.hotels .mk h1 {
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-left: 10px;
+  margin-top: 12%;
+  color: rgb(5, 55, 76);
+}
+.hotels .mk h1 span {
+  color: rgb(95, 162, 185); 
+}

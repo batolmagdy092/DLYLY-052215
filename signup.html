@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" href="backgrounds/PicsArt_09-27-12.36.26-removebg-preview.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="co">
+    <div class="large">
+      
+      <div class="logg">
+        <img src="backgrounds/PicsArt_09-27-12.36.26-removebg-preview.png" class="im">
+        <h1 class="log">Already have an account?</h1> <br>
+        <a class="loginlink" href="login.html"><button>Log In</button></a>
+      </div>
+      <form class="signup" id="signupForm">
+
+        <h1 class="Create">Create Account</h1>
+
+        <div class="to">
+          <div class="input-container">
+              <input type="text" placeholder="First Name" id="first-name" name="first-name" required minlength="3" maxlength="10" class="fn-input">
+              <label for="first-name" class="floating-label">First Name</label>
+          </div>
+
+          <div class="input-container">
+              <input type="text" placeholder="Last Name" id="last-name" name="last-name" required minlength="3" maxlength="10" class="fn-input">
+              <label for="last-name" class="floating-label">Last Name</label>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input type="text" placeholder="Username" id="username" name="username" class="fn-input" required minlength="6" maxlength="20">
+          <label for="username" class="floating-label">Username</label>
+        </div>
+
+        <div class="input-container">
+          <input type="email" placeholder="Email" id="email" name="email" class="fn-input" required>
+          <label for="email" class="floating-label">Email</label>
+        </div>
+
+        <div class="input-container">
+          <div class="dropdown" onclick="toggleDropdown(event)">
+            <input type="text" id="country" placeholder="Country" onfocus="showAllCountries()" oninput="filterCountries()" name="country" class="fn-input" required>
+            <label for="country" class="floating-label">Country</label>
+            <img id="arrow" class="arrow" src="https://cdn-icons-png.flaticon.com/512/892/892498.png" alt="Arrow">
+          </div>
+        </div>
+        
+        <ul id="countryList"></ul>
+        
+        <div class="phone-input">
+          <input type="text" id="countryCode" class="country-code" readonly value="">
+          <div class="input-container">
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" name="phoneNumber" class="fn-input" required oninput="validatePhoneNumber(this)">
+            <label for="phoneNumber" class="floating-label">Phone Number</label>
+          </div>
+        </div>
+
+        <div class="gender-container">
+          <label class="gen">Gender</label>
+          <div class="gender-options">
+            <div class="gender-option">
+              <input type="radio" id="male" name="gender" value="male" required>
+              <label for="male">Male</label>
+            </div>
+            <div class="gender-option">
+              <input type="radio" id="female" name="gender" value="female" required>
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input type="date" placeholder="BirthDay" id="birthday" name="birthday" class="fn-input" required>
+          <label for="birthday" class="floating-label">BirthDay</label>
+        </div>
+
+        <div class="input-container">
+          <input type="password" placeholder="Password" id="password" name="password" class="fn-input"required minlength="7" maxlength="16">
+          <label for="password" class="floating-label">Password</label>
+        </div>
+
+        <div class="input-container">
+          <input type="password" placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" class="fn-input" required>
+          <label for="confirmPassword" class="floating-label">Confirm Password</label>
+        </div>
+
+        <div class="final">
+          <div class="agree">
+          <input type="checkbox" required><label> I agree to the <a>Terms & Conditions</a>. </label><br>
+          <input type="checkbox" required><label> I am not a robot. </label>
+          </div>
+          <!--<p class="not">By continuing, you agree to our <a class="privecylink">Terms of 
+          <br>Service</a> and<a class="privecylink"> Privacy policy</a></p>-->
+          <button type="submit">Sign Up</button>
+        </div>
+      </form>
+
+    </div>
+    </div>
+    <script src="signup.js"></script>
+  </body>
+</html>

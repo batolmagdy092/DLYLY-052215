@@ -1,0 +1,420 @@
+   body
+   {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('backgrounds/m.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   }   
+   body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(5, 55, 76, 0.416);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.084);
+    z-index: 1;
+}
+.co {
+    position: relative;
+    z-index: 2; 
+} 
+   .large
+   {
+    width: 1100px;
+    height: 550px;
+    border: solid 1.5px white;
+    border-radius: 25px;
+    margin-left: 15.20%;
+    margin-top: 6%;
+    background-color: rgba(95, 162, 185, 0.847);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   } 
+   .signup
+   {
+    width: 500px;
+    height: 700px;
+    border: solid 1.5px rgb(202, 220, 231);
+    border-radius: 25px;
+    margin-top: -48.5%;
+    margin-left: 6%;
+    background-color: rgb(202, 220, 231);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   }
+   .Create
+   {
+    margin-left: 25%;
+    color: rgb(5, 55, 76);
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   .log
+   {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 58.5%;
+   }
+   .dropdown 
+    {
+    display: flex;
+    position: relative; /* Added position relative */
+    margin-bottom: 20px;
+    justify-content: space-between;
+    }
+    .fn-input 
+    {
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Added padding for the arrow */
+    margin-bottom: 20px;
+    border: solid 2px rgb(95, 162, 185);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(5, 55, 76);
+    font-size: 20px;
+    }
+    .arrow 
+    {
+    transition: transform 0.3s ease;
+    position: absolute; /* Position the arrow inside the input */
+    right: 10px;
+    margin-top: 5%;
+    transform: translateY(-50%); /* Center vertically */
+    pointer-events: none; /* Prevent clicks on the arrow */
+    width: 12px; /* Set width */
+    height: 12px; /* Set height */
+    }
+    .phone-input 
+    {
+    display: flex;
+    gap: 10px;
+    margin-top: -4%;
+    }
+    .country-code 
+    {
+    width: 70px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 2%;
+    padding: 10px 30px 10px 10px; /* Added padding for the arrow */
+    margin-bottom: 20px;
+    border: solid 2px rgb(95, 162, 185);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(5, 55, 76);
+    font-size: 20px;
+    }
+    ul 
+    {
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(5, 55, 76);
+    border: 1px solid rgb(5, 55, 76);
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    margin-top: -6.5%;
+    }
+    li 
+    {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(95, 162, 185);
+    color: white;
+    }
+    li:last-child 
+    {
+    border-bottom: none;
+    }
+    li:hover 
+    {
+    background-color: #444;
+    }
+    li img 
+    {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    vertical-align: middle;
+    }
+    .input-container 
+    {
+    position: relative;
+    margin-left: 2%;
+    }
+    .fn-input 
+    {
+        font-size: 16px;
+        padding: 12px 16px;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .fn-input::placeholder
+    {
+        background-color: transparent;
+    }
+    .fn-input:focus 
+    {
+        border-color: rgb(7, 71, 99);
+        box-shadow: 0 0 8px rgba(5, 55, 76, 0.42); 
+        border-radius: 8px;
+    }
+    .floating-label 
+    {
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        background-color: rgb(202, 220, 231);
+        backdrop-filter: blur(10px);
+        padding: 0 5px;
+        color: #999;
+        font-size: 16px;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .input-container input:focus + .floating-label,
+    .input-container input:not(:placeholder-shown) + .floating-label 
+    {
+        font-family:Arial, Helvetica, sans-serif;
+        top: -10px; 
+        left: 16px;
+        font-size: 12px; 
+        color: rgb(7, 71, 99); 
+    }
+    .input-container input:focus {
+        border-color: rgb(7, 71, 99) ;
+    }
+    .fn-input::placeholder {
+        color: transparent; /* hide placeholder */
+    }
+    .gender
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .gender-container {
+        margin-top: -1%;
+        margin-left: 2%;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .gender-container label
+    {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(5, 55, 76);
+        cursor: pointer;
+    }
+    .gender-options {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .gender-option {
+        display: flex;
+        align-items: center;
+        margin-right: 10px; 
+    }
+    .gender-option input {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .gender-option label {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        color: rgb(5, 55, 76);
+        cursor: pointer;
+    }
+    .final
+    {
+        justify-content: space-between;
+        display: flex;
+        margin-left: 3%;
+        margin-top: -1%;
+    }
+    .not
+    {
+    color: rgb(5, 55, 76);
+    font-size: 15px;
+    margin-top: 2%;
+    }
+    .privecylink
+    {
+    text-decoration: none;
+    color: rgb(95, 162, 185);
+    }
+    .privecylink:hover
+    {
+    color: rgb(5, 55, 76);
+    }
+    .final p
+    {
+        margin-top: -0.10%;
+        margin-left: 7%;
+        text-align: center;
+    }
+    .final button
+    {
+        width: 150px;
+        height: 50px;
+        border: solid 1px white;
+        border-radius: 15px;
+        background-color: rgb(95, 162, 185);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        margin-right: 4%;
+        margin-left: -8%;
+        margin-top: -1%;
+    }
+    .final button:hover
+    {
+        border: solid 1px white;
+        border-radius: 15px;
+        background-color: rgb(5, 55, 76);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    .logg button
+    {
+        margin-left: 69.5%;
+        width: 150px;
+        height: 50px;
+        border: solid 1px white;
+        border-radius: 15px;
+        background-color: rgb(95, 162, 185);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .logg button:hover
+    {
+        border: solid 1px white;
+        border-radius: 15px;
+        background-color: rgb(5, 55, 76);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+    .im
+    {
+        width: 300px;
+        height: 300px;
+        margin-left: 62%;
+        margin-top: 1%;
+    }
+    .to .input-container 
+    {
+    position: relative;
+    margin-left: 2%;
+    }
+    .to .fn-input 
+    {
+        font-size: 16px;
+        padding: 12px 16px;
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .to .fn-input::placeholder
+    {
+        background-color: transparent;
+    }
+    .to .fn-input:focus 
+    {
+        border-color: rgb(7, 71, 99); 
+        box-shadow: 0 0 8px rgba(5, 55, 76, 0.42); 
+        border-radius: 8px;
+    }
+    .to .floating-label 
+    {
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        background-color: rgb(202, 220, 231);
+        backdrop-filter: blur(10px);
+        padding: 0 5px;
+        color: #999;
+        font-size: 16px;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .to .input-container input:focus + .to .floating-label,
+    .to .input-container input:not(:placeholder-shown) + .to .floating-label 
+    {
+        font-family:Arial, Helvetica, sans-serif;
+        top: -10px; 
+        left: 16px;
+        font-size: 12px; 
+        color: rgb(7, 71, 99); 
+    }
+    .to .input-container input:focus {
+        border-color: rgb(7, 71, 99) ;
+    }
+    .to .fn-input::placeholder {
+        color: transparent; 
+    }
+    .to .fn-input 
+    {
+    width: 70%;
+    padding: 10px 30px 10px 10px; /* Added padding for the arrow */
+    margin-bottom: 20px;
+    border: solid 2px rgb(95, 162, 185);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(5, 55, 76);
+    font-size: 20px;
+    }
+    .to
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    .input-container {
+        position: relative;
+        width: 300px;
+    }
+    .input-container .fa {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #aaa;
+    }
+    .agree 
+    {
+        font-size: 15px;
+        color: rgb(5, 55, 76);
+    }
+    .agree input[type="checkbox"] 
+    {
+        width: 15px;
+        height: 15px;
+        accent-color: rgb(95, 162, 185); 
+    }
+    .agree label a
+    {
+        color: rgb(95, 162, 185);
+        text-decoration: underline;
+    }
+    .agree label a:hover
+    {
+        color: rgb(5, 55, 76);
+        text-decoration: underline;
+    }
