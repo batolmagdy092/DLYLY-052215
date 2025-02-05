@@ -1,0 +1,149 @@
+/* استيراد خط جميل للصفحة */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* تنسيق عام للصفحة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* ====== تصميم الهيدر ====== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(5, 55, 76, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .logo span {
+    color: rgb(95, 162, 185);
+}
+
+header .navbar a {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 15px;
+    position: relative;
+}
+
+header .navbar a:hover {
+    color: rgb(95, 162, 185);
+}
+
+header .navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(95, 162, 185);
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+header .navbar a:hover::after {
+    width: 100%;
+}
+
+/* ====== تصميم القسم الرئيسي ====== */
+section.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* تغطية كامل ارتفاع الشاشة */
+    text-align: center;
+    background: url('../dlyly/companies_home/DALL·E\ 2025-02-05\ 21.12.40\ -\ A\ stunning\ high-resolution\ image\ of\ an\ Egyptian\ seaside\ landscape\ at\ sunset.\ The\ scene\ features\ a\ beautiful\ beach\ with\ clear\ blue\ waters\,\ soft\ golden\ .webp') no-repeat center center; /* محاذاة الخلفية في المنتصف */
+    background-size: cover; /* ضبط الحجم لتغطية الشاشة */
+    position: relative; /* تثبيت العنصر */
+    margin: 0; /* إزالة أي فراغات */
+    padding: 0; /* إزالة الحشوات */
+}
+
+section.back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+section .detail {
+    position: relative;
+    color: white;
+    max-width: 800px;
+    text-align: left;
+    z-index: 2;
+}
+
+.detail h1 {
+    font-size: 3rem;
+    color: rgb(95, 162, 185);
+}
+
+.detail p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* ====== تصميم زر الحجز ====== */
+button.bk {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: rgb(95, 162, 185);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+button.bk:hover {
+    background-color: rgb(5, 55, 76);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.imgg
+{
+    margin-left: -450px;
+    margin-top: 200px;
+}
+.pra
+{
+  margin-top: -400px;
+}
+
+.img8
+{
+    width: 400px;
+    height: 200px;
+}
